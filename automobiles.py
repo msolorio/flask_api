@@ -36,7 +36,7 @@ def create():
 
 
 
-@automobiles_bp.route('/<int:idx>', methods=['PUT'])
+@automobiles_bp.route('/<int:idx>/', methods=['PUT'])
 def update(idx):
     update_dict = {}
     if 'make' in request.json:
@@ -51,7 +51,7 @@ def update(idx):
 
 
 
-@automobiles_bp.route('/<int:idx>', methods=['DELETE'])
+@automobiles_bp.route('/<int:idx>/', methods=['DELETE'])
 def delete(idx):
     autos_data.pop(idx)
 
